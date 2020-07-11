@@ -13,6 +13,12 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -185,6 +191,11 @@
       justify-content: center;
       padding: 2rem;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 1.5rem .5rem;
+    }
   }
 
   &__icon {
@@ -192,6 +203,13 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; // Use color of parent element
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-bottom: .7rem;
+    }
   }
 }
 
@@ -232,6 +250,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -266,17 +289,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: .8rem;
     text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: .5rem;
+    }
   }
 }
 
@@ -292,6 +327,10 @@
   background-color: transparent;
   cursor: pointer;
   transition: all .2s;
+
+  @media only screen and (max-width: $bp-small) {
+    align-self: center;
+  }
 
   & span {
     margin-left: 3px;
@@ -396,6 +435,14 @@
 
 ///////////////////////////
 // REVIEWS
+.user-reviews {
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 .review {
   background-color: white;
   box-shadow: 0 2rem 5rem rgba(0,0,0,.06);
